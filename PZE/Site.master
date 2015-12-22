@@ -1,0 +1,117 @@
+﻿<%--    Copyright © 2015 by Commend International GmbH. All rights reserved.
+
+    This program is free software: you can redistribute it and/or  modify
+    it under the terms of the GNU Affero General Public License, version 3,
+    as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.--%>
+
+<%@ Master Language="C#" AutoEventWireup="false" Inherits="com.commend.tools.PZE.SiteMaster" Codebehind="Site.master.cs" %>
+
+<%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .menu {}
+        .menu {}
+    </style>
+
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Projektzeiterfassung
+                </h1>
+            </div>
+
+            <div class="clear navigationMenu" style="z-index: 16777271">
+                <dx:ASPxMenu ID="NavigationMenu" runat="server" CssClass="menu" AllowSelectItem="True" ShowPopOutImages="True" Width="80">
+                    <Items>
+                        <dx:MenuItem Name="Projektzeit" Text="Projektzeit" Image-Url="Icons/projectTime.png">
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/UserRecords.aspx" Image-Url="Icons/record.png"
+                                    Text="Buchen" />
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/TTImport.aspx" Image-Url="Icons/tt-logo-56x58.png"
+                                    Text="TestTrack Import" />
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/UserRecordOverview.aspx" Image-Url="Icons/recordReport.png"
+                                    Text="Buchungsauswertung" />
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/LockRecordLeader.aspx" Image-Url="Icons/recordReport.png"
+                                    Text="Vorgesetzten Freigabe" Visible="false"/>
+                            </Items>
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="Auswertungen" NavigateUrl="~/Report.aspx" Image-Url="Icons/report.png"/>
+                        <dx:MenuItem Text="Einstellungen" Image-Url="Icons/settings.png">
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/UserSettings.aspx" Image-Url="Icons/User.png" Text="Benutzer"/>
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/ProjectSettings.aspx" Image-Url="Icons/projects.png"  Text="Projekte"/>
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/ResearchProjectSettings.aspx" Image-Url="Icons/researchProjects.png" Text="Forschungsprojekte"/>
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/ActivitySettings.aspx" Image-Url="Icons/Activities.png" Text="Tätigkeiten"/>
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/PspCodeSettings.aspx" Image-Url="Icons/PspCodes.png" Text="PSP Codes"/>
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/DivisionSettings.aspx" Image-Url="Icons/Bereich.png" Text="Bereich"/>
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/FilterSettings.aspx" Image-Url="Icons/filter.png" Text="Filter"/>
+                            </Items>
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/ProjecttypeSettings.aspx" Image-Url="Icons/projects.png" Text="Projekt-Typen" />
+                            </Items>
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="Info" NavigateUrl="~/Info.aspx" Image-Url="Icons/about.png" />
+                    </Items>
+                </dx:ASPxMenu>
+            </div>
+
+            <div class="accountInfo">
+                <asp:Literal ID="accountInfo" runat="server" />
+                <asp:LinkButton ID="LogoutLinkButton" runat="server" Text="( abmelden )" OnClick="LogoutButton_Click" />
+            </div>
+            
+        </div>
+        <div class="main" style="z-index: 1">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear" style="z-index: 2">
+        </div>
+    </div>
+    <div class="footer" style="z-index: 3">
+        
+    </div>
+    </form>
+</body>
+</html>

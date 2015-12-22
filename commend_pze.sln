@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.commend.tools.PZE", "PZE\com.commend.tools.PZE.csproj", "{31244320-8FF5-49B2-B2EE-000ADB129DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.commend.tools.PZE.Data", "com.commend.tools.PZE.Data\com.commend.tools.PZE.Data.csproj", "{377238D9-D0CF-4E47-A67E-D723E01BA44E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4DA194C9-4924-4FDC-A781-79F2B18A9170}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31244320-8FF5-49B2-B2EE-000ADB129DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31244320-8FF5-49B2-B2EE-000ADB129DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31244320-8FF5-49B2-B2EE-000ADB129DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31244320-8FF5-49B2-B2EE-000ADB129DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{377238D9-D0CF-4E47-A67E-D723E01BA44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{377238D9-D0CF-4E47-A67E-D723E01BA44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{377238D9-D0CF-4E47-A67E-D723E01BA44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{377238D9-D0CF-4E47-A67E-D723E01BA44E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

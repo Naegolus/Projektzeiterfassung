@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31244320-8FF5-49B2-B2EE-000ADB129DED}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.commend.tools.PZE</RootNamespace>
+    <AssemblyName>PZE</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.Web, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Web, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="App_Data\templates\RequireBMDConfirmation.txt" />
+    <Content Include="ColorLegendeEmployee.ascx" />
+    <Content Include="ColorLegendeLeaderLock.ascx" />
+    <Content Include="ConfirmBMDRecords.aspx" />
+    <Content Include="DayOverview.ascx" />
+    <Content Include="Icons\add.png" />
+    <Content Include="Icons\cancel.png" />
+    <Content Include="Icons\save.png" />
+    <Content Include="Icons\text.png" />
+    <Content Include="Icons\update.png" />
+    <Content Include="ImportBMD.aspx" />
+    <Content Include="LockRecordEmployee.aspx" />
+    <Content Include="LockRecordLeader.aspx" />
+    <Content Include="ProjecttypeSettings.aspx" />
+    <Content Include="Site.master" />
+    <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Styles\Report.css" />
+    <Content Include="Web References\TTSoapCgi\CDatabase.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CDatabaseTable.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CDefect.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CDefectEventDefinition.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CEventDefinition.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CField.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CFieldValue.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CFileAttachment.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CFilter.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CFolder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CFolderItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CFolderType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CGlobalUser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CItemHyperlinkContainer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CItemToTrack.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CLink.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CProject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CProjectDataOption.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CRecordListSoap.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CReportRunResults.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CRequirement.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CRequirementDocument.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CSystem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CTableColumn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CTableField.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CTask.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CTestCase.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CTestRun.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CTreeNodeSoap.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CUser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\CUserLicense.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TTSoapCgi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\TTSoapCgi\ttsoapcgi.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\AccessDenied.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="ActivitySettings.aspx" />
+    <Content Include="App_Data\Projektzeiterfassung.mdf" />
+    <Content Include="App_Data\Projektzeiterfassung_log.LDF">
+      <DependentUpon>Projektzeiterfassung.mdf</DependentUpon>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="DivisionSettings.aspx" />
+    <Content Include="FilterSettings.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HistoryGrid.ascx" />
+    <Content Include="Icons\about.png" />
+    <Content Include="Icons\Activities.png" />
+    <Content Include="Icons\Bereich.png" />
+    <Content Include="Icons\CollapseAll.png" />
+    <Content Include="Icons\columnSettings.png" />
+    <Content Include="Icons\delete.png" />
+    <Content Include="Icons\edit.png" />
+    <Content Include="Icons\ExpandAll.png" />
+    <Content Include="Icons\export.png" />
+    <Content Include="Icons\favorites.png" />
+    <Content Include="Icons\filter.png" />
+    <Content Include="Icons\preview.png" />
+    <Content Include="Icons\Projects.png" />
+    <Content Include="Icons\projectTime.png" />
+    <Content Include="Icons\PspCodes.png" />
+    <Content Include="Icons\record.png" />
+    <Content Include="Icons\recordReport.png" />
+    <Content Include="Icons\report.png" />
+    <Content Include="Icons\ResearchProjects.png" />
+    <Content Include="Icons\Rows-01_blue_16x16.png" />
+    <Content Include="Icons\settings.png" />
+    <Content Include="Icons\showAllColumns.png" />
+    <Content Include="Icons\tt-logo-56x58.png" />
+    <Content Include="Icons\UnGroup.png" />
+    <Content Include="Icons\Update_16x16.png" />
+    <Content Include="Icons\User.png" />
+    <Content Include="Info.aspx" />
+    <Content Include="ProjectSettings.aspx" />
+    <Content Include="PspCodeSettings.aspx" />
+    <Content Include="Report.aspx" />
+    <Content Include="ResearchProjectSettings.aspx" />
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\shortcut.js" />
+    <Content Include="Styles\header.PNG" />
+    <Content Include="Styles\header_bct.png" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="TTImport.aspx" />
+    <Content Include="UserRecordOverview.aspx" />
+    <Content Include="UserRecords.aspx" />
+    <Content Include="UserSettings.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivitySettings.aspx.cs">
+      <DependentUpon>ActivitySettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivitySettings.aspx.designer.cs">
+      <DependentUpon>ActivitySettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ColorLegendeEmployee.ascx.cs">
+      <DependentUpon>ColorLegendeEmployee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ColorLegendeEmployee.ascx.designer.cs">
+      <DependentUpon>ColorLegendeEmployee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ColorLegendeLeaderLock.ascx.cs">
+      <DependentUpon>ColorLegendeLeaderLock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ColorLegendeLeaderLock.ascx.designer.cs">
+      <DependentUpon>ColorLegendeLeaderLock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmBMDRecords.aspx.cs">
+      <DependentUpon>ConfirmBMDRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmBMDRecords.aspx.designer.cs">
+      <DependentUpon>ConfirmBMDRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DayOverview.ascx.cs">
+      <DependentUpon>DayOverview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DayOverview.ascx.designer.cs">
+      <DependentUpon>DayOverview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionSettings.aspx.designer.cs">
+      <DependentUpon>DivisionSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FilterSettings.aspx.designer.cs">
+      <DependentUpon>FilterSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryGrid.ascx.designer.cs">
+      <DependentUpon>HistoryGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportBMD.aspx.cs">
+      <DependentUpon>ImportBMD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportBMD.aspx.designer.cs">
+      <DependentUpon>ImportBMD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Info.aspx.designer.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LockRecordEmployee.aspx.cs">
+      <DependentUpon>LockRecordEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LockRecordEmployee.aspx.designer.cs">
+      <DependentUpon>LockRecordEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LockRecordLeader.aspx.cs">
+      <DependentUpon>LockRecordLeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LockRecordLeader.aspx.designer.cs">
+      <DependentUpon>LockRecordLeader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\BMDConnection\BMDImporter.cs" />
+    <Compile Include="Misc\StyleNames.cs" />
+    <Compile Include="Misc\XpoHelper.cs" />
+    <Compile Include="ProjecttypeSettings.aspx.cs">
+      <DependentUpon>ProjecttypeSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjecttypeSettings.aspx.designer.cs">
+      <DependentUpon>ProjecttypeSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ExtendedPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\HistoryGridView.cs" />
+    <Compile Include="Misc\LDAPHelper.cs" />
+    <Compile Include="ProjectSettings.aspx.designer.cs">
+      <DependentUpon>ProjectSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PspCodeSettings.aspx.designer.cs">
+      <DependentUpon>PspCodeSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResearchProjectSettings.aspx.designer.cs">
+      <DependentUpon>ResearchProjectSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Compile Include="TTImport.aspx.designer.cs">
+      <DependentUpon>TTImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRecordOverview.aspx.designer.cs">
+      <DependentUpon>UserRecordOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRecords.aspx.designer.cs">
+      <DependentUpon>UserRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserSettings.aspx.designer.cs">
+      <DependentUpon>UserSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TTSoapCgi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\TTConnection\TTFilters\FilterLastMonth.cs" />
+    <Compile Include="Misc\TTConnection\TTFilters\FilterLastWeek.cs" />
+    <Compile Include="Misc\TTConnection\TTFilters\FilterThisMonth.cs" />
+    <Compile Include="Misc\TTConnection\TTFilters\FilterThisWeek.cs" />
+    <Compile Include="Misc\TTConnection\TTFilters\FilterToday.cs" />
+    <Compile Include="Misc\TTConnection\TTFilters\FilterYesterday.cs" />
+    <Compile Include="Misc\TTConnection\TTFilters\TtFilter.cs" />
+    <Compile Include="Misc\TTConnection\TTHelper.cs" />
+    <Compile Include="Misc\TTConnection\TTImportData.cs" />
+    <Compile Include="Misc\UpdateDatabase.cs" />
+    <Compile Include="Misc\WebApplication.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DivisionSettings.aspx.cs">
+      <DependentUpon>DivisionSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FilterSettings.aspx.cs">
+      <DependentUpon>FilterSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoryGrid.ascx.cs">
+      <DependentUpon>HistoryGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Info.aspx.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectSettings.aspx.cs">
+      <DependentUpon>ProjectSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PspCodeSettings.aspx.cs">
+      <DependentUpon>PspCodeSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResearchProjectSettings.aspx.cs">
+      <DependentUpon>ResearchProjectSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTImport.aspx.cs">
+      <DependentUpon>TTImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRecordOverview.aspx.cs">
+      <DependentUpon>UserRecordOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRecords.aspx.cs">
+      <DependentUpon>UserRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserSettings.aspx.cs">
+      <DependentUpon>UserSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:49877/ttsoapcgi.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TTSoapCgi\</RelPath>
+      <UpdateFromURL>http://localhost:49877/ttsoapcgi.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PZE_TTSoapCgi_ttsoapcgi</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.commend.tools.PZE.Data\com.commend.tools.PZE.Data.csproj">
+      <Project>{377238d9-d0cf-4e47-a67e-d723e01ba44e}</Project>
+      <Name>com.commend.tools.PZE.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60820</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60820/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

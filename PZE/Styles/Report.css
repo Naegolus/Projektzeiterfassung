@@ -1,0 +1,19 @@
+﻿.style1 {
+    width: 160px;
+}
+
+.style2 {
+    width: 146px;
+}
+
+.style3 {
+    width: 149px;
+}
+
+.showColumnsRow{
+    display: table-row;
+}
+
+.showColumnsCell{
+    display: table-cell;
+}
